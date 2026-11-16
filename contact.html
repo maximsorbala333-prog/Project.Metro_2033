@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Contact și formular demonstrativ pentru proiectul despre Metro 2033.">
+        <title>Contact | Metro 2033</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header class="site-header">
+            <p class="eyebrow">Jurnal de expediție</p>
+            <h1>CONTACT <span>STAȚIA</span></h1>
+            <p class="tagline">Lasă un mesaj echipei de explorare.</p>
+        </header>
+
+        <nav aria-label="Navigare principală">
+            <a href="index.html">Acasă</a>
+            <a href="despre.html">Universul jocului</a>
+            <a href="carte.html">Cartea și jocul</a>
+            <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+        <main>
+            <section>
+                <p class="eyebrow">Formular demonstrativ</p>
+                <h2>Trimite un mesaj</h2>
+                <p>Completează câmpurile pentru a exersa un formular HTML. Datele nu sunt trimise către niciun server.
+                </p>
+                <form class="contact-form" id="contact-form">
+                    <label for="name">Nume</label>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+
+                    <label for="message">Mesaj</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+
+                    <button type="submit">Trimite mesajul</button>
+                    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+                </form>
+            </section>
+
+            <section>
+                <p class="eyebrow">Studiul 3</p>
+                <h2>Exemplu de tabel cu date</h2>
+                <div class="table-wrap">
+                    <table>
+                        <caption>Obiecte utile pentru o expediție</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Obiect</th>
+                                <th scope="col">Categorie</th>
+                                <th scope="col">Utilitate</th>
+                                <th scope="col">Prioritate</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Mască de gaze</th>
+                                <td>Protecție</td>
+                                <td>Ajută în zone cu aer contaminat</td>
+                                <td>Ridicată</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Filtru de rezervă</th>
+                                <td>Consumabil</td>
+                                <td>Menține funcțională masca</td>
+                                <td>Ridicată</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Lanternă</th>
+                                <td>Iluminare</td>
+                                <td>Ajută la explorarea tunelurilor</td>
+                                <td>Medie</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Trusă medicală</th>
+                                <td>Sănătate</td>
+                                <td>Oferă ajutor în caz de accidentare</td>
+                                <td>Ridicată</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Hartă</th>
+                                <td>Orientare</td>
+                                <td>Arată rutele dintre stații</td>
+                                <td>Medie</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <aside class="notice">
+                <h2>Navigare rapidă</h2>
+                <p>Poți reveni la <a href="index.html">pagina principală</a> sau poți explora <a
+                        href="despre.html">universul jocului</a>.</p>
+            </aside>
+        </main>
+        <footer>
+            <p>Ghid de prezentare realizat de un fan. Metro 2033 este o creație protejată de drepturi de autor.</p>
+        </footer>
+        <script>
+            document.getElementById("contact-form").addEventListener("submit", function (event) {
+                event.preventDefault();
+                document.getElementById("form-status").textContent =
+                    "Mesaj demonstrativ înregistrat doar în această pagină; nu a fost trimis către un server.";
+                this.reset();
+            });
+        </script>
+    </body>
+</html>
